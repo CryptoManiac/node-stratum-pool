@@ -28,7 +28,6 @@
         "url": "https://github.com/CryptoManiac/node-stratum-pool.git"
     },
     "dependencies": {
-        "multi-hashing": "git://github.com/CryptoManiac/node-multi-hashing.git",
         "bignum": "*",
         "base58-native": "*",
         "async": "*"
