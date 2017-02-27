@@ -40,7 +40,7 @@ var pool = Stratum.createPool({
     },
     "ports": {
         "3032": {
-            "diff": 2048,
+            "diff": 1024,
             "varDiff": {
                 "minDiff": 1024,
                 "maxDiff": 65536,
@@ -85,11 +85,12 @@ pool.on('share', function(isValidShare, isValidBlock, data){
     console.log('share data: ' + JSON.stringify(data));
 });
 
-pool.on('block', function(coin, height, blockHash, txHash) {
+pool.on('block', function(coin, height, blockHash, txHash, blockReward) {
     console.log('Mined block on ' + coin + ' network!');
     console.log('HEIGHT: ' + height);
     console.log('HASH: ' + blockHash);
     console.log('TX: ' + txHash);
+    console.log('REWARD: ' + blockReward);
 });
 
 pool.on('log', function(severity, logText){
