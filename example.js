@@ -75,10 +75,7 @@ var pool = Stratum.createPool({
 });
 
 pool.on('share', function(isValidShare, isValidBlock, data){
-
-    if (isValidBlock)
-        console.log('Block found');
-    else if (isValidShare)
+    if (isValidShare)
         console.log('Valid share submitted');
     else if (data.blockHash)
         console.log('We thought a block was found but it was rejected by the daemon');
@@ -88,10 +85,17 @@ pool.on('share', function(isValidShare, isValidBlock, data){
     console.log('share data: ' + JSON.stringify(data));
 });
 
+pool.on('block', function(coin, height, blockHash, txHash) {
+    console.log('Mined block on ' + coin + ' network!');
+    console.log('HEIGHT: ' + height);
+    console.log('HASH: ' + blockHash);
+    console.log('TX: ' + txHash);
+});
 
 pool.on('log', function(severity, logText){
     console.log('[' + severity + '] ' + logText);
 });
+
 
 pool.start();
 
