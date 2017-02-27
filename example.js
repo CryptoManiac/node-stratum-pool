@@ -1,9 +1,9 @@
 var Stratum = require('./');
 
 var bitcoin = {
-    "name": "Bitcoin",
-    "symbol": "BTC",
-    "peerMagic": "f9beb4d9" //optional
+    "name": "BitcoinTest",
+    "symbol": "BTCT",
+    "peerMagic": "0B110907" //optional
 };
 
 var pool = Stratum.createPool({
@@ -11,8 +11,8 @@ var pool = Stratum.createPool({
     "coin": bitcoin,
 
     "auxes":[{
-        "name": "Namecoin",
-        "symbol": "NMC",
+        "name": "NamecoinTest",
+        "symbol": "NMCT",
         "daemons": [{
             "host": "127.0.0.1",
             "port": 18336,
@@ -21,7 +21,7 @@ var pool = Stratum.createPool({
         }],
     }],
 
-    "address": "19bZyCxzNggG5EttjVbVLasiT71qMzCwRL",
+    "address": "n3dgGNBmxfxm4g9knP8AaYMfqFjfngiV93",
 
     "rewardRecipients": {
     },
@@ -53,7 +53,7 @@ var pool = Stratum.createPool({
     "daemons": [
         {
             "host": "127.0.0.1",
-            "port": 8332,
+            "port": 18332,
             "user": "bitcoinrpc",
             "password": "something"
         }
