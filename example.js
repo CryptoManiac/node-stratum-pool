@@ -10,6 +10,17 @@ var pool = Stratum.createPool({
 
     "coin": bitcoin,
 
+    "auxes":[{
+        "name": "Namecoin",
+        "symbol": "NMC",
+        "daemons": [{
+            "host": "127.0.0.1",
+            "port": 18336,
+            "user": "namecoinrpc",
+            "password": "123"
+        }],
+    }],
+
     "address": "19bZyCxzNggG5EttjVbVLasiT71qMzCwRL",
 
     "rewardRecipients": {
