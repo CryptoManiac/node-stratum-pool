@@ -93,6 +93,13 @@ pool.on('block', function(coin, height, blockHash, txHash, blockReward) {
     console.log('REWARD: ' + blockReward);
 });
 
+pool.on('auxblock', function(coin, height, blockHash, txHash) {
+    console.log('Mined auxillary block on ' + coin + ' network!');
+    console.log('HEIGHT: ' + height);
+    console.log('HASH: ' + blockHash);
+    console.log('TX: ' + txHash);
+});
+
 pool.on('log', function(severity, logText){
     console.log('[' + severity + '] ' + logText);
 });
