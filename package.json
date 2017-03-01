@@ -1,6 +1,6 @@
 {
     "name": "stratum-pool",
-    "version": "0.1.9",
+    "version": "0.2.0",
     "description": "High performance Stratum poolserver in Node.js",
     "keywords": [
         "stratum",
@@ -8,19 +8,15 @@
         "pool",
         "server",
         "poolserver",
-        "bitcoin",
-        "litecoin",
-        "scrypt"
+        "bitcoin"
     ],
     "homepage": "https://github.com/CryptoManiac/node-stratum-pool",
     "bugs": {
         "url": "https://github.com/CryptoManiac/node-stratum-pool/issues"
     },
     "license": "GPL-2.0",
-    "author": "Matthew Little",
+    "author": "Alex D.",
     "contributors": [
-        "vekexasia",
-        "TheSeven"
     ],
     "main": "lib/index.js",
     "repository": {
